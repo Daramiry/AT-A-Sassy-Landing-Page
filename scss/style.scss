@@ -1,3 +1,8 @@
+$font-stack: Trebuchet MS, Arial, sans-serif;
+$light-color: #FFC300;
+$primary-color: #000814;
+$secondary-color: #a2d0fc;
+
 
 * {
   box-sizing: border-box;
@@ -20,16 +25,45 @@ a {
 }
 
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+  background-color: ($secondary-color);
+  height: 600px;
 
-  // Take a look at the other files we've built already. How can they be useful here?
+nav {
+  border: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
+ul {
+  display: flex;
+  list-style: none;
+  } 
+li {
+  padding: 15px;
+  }
+a {
+  color: text-color-picker($primary-color);
+  }
+a:hover {
+  color: $light-color;
+  }
 }
+&-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 
+  img {
+    size: 10px;
+  }
+  h1 {
+    font-size: 80px;
+    line-height: 1.2;
+   }
+  }
+}
 // This code is related to some of the aspects of SCSS we have yet to cover.
 // While you don't have to mess with it, it would be advisable to attempt to understand its functionality.
 $spaceamounts: (1,2,3,4,5);
